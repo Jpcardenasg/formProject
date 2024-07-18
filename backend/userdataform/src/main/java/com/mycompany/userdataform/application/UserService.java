@@ -8,9 +8,9 @@ public interface UserService {
 
     Customer saveUser(Customer user);
 
-    Customer updateUser(Customer user, Long userId);
+    Customer updateUser(Customer user, Integer userId);
 
-    void deleteUser(Long userId);
+    void deleteUser(Integer userId);
 
     List<Customer> fetchUsersList();
 

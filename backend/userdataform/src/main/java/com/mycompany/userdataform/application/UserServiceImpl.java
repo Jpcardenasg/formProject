@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Customer updateUser(Customer user, Long userId) {
+    public Customer updateUser(Customer user, Integer userId) {
 
         Customer userToUpdate = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User not found"));
@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void deleteUser(Long userId) {
+    public void deleteUser(Integer userId) {
         userRepository.deleteById(userId);
     }
 

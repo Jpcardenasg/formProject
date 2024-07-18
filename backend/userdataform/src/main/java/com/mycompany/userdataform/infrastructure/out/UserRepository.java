@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.mycompany.userdataform.domain.models.Customer;
 
 @Repository
-public interface UserRepository extends JpaRepository<Customer, Long> {
+public interface UserRepository extends JpaRepository<Customer, Integer> {
 
 }
