@@ -1,0 +1,27 @@
+# Ignore Node.js files
+frontend/userForm/node_modules/
+frontend/userForm/npm-debug.log
+frontend/userForm/yarn-error.log
+
+# Ignore Compiled output
+frontend/userForm/build/
+frontend/userForm/dist/
+
+# Ignore logs
+frontend/userForm/logs/
+frontend/userForm/*.log
+
+# Ignore Environment variables
+frontend/userForm/.env
+
+# Ignore IDE files
+frontend/userForm/.idea/
+frontend/userForm/.vscode/
+
+# Ignore OS generated files
+frontend/userForm/.DS_Store
+frontend/userForm/Thumbs.db
+
+# Ignore npm package-lock files
+frontend/userForm/package-lock.json
+frontend/userForm/yarn.lock
