@@ -52,6 +52,7 @@ proyecto/
 
     - Importa el proyecto Maven en tu IDE.
     - Asegúrate de tener configurada tu base de datos PostgreSQL y actualiza application.properties con los detalles correctos.
+    - Ajusta la URL donde sirves el servidor Frontend para permitir el acceso en WebCofig.java
 
 1. **Frontend**:
 
