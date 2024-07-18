@@ -2,7 +2,7 @@
 Este proyecto implementa un formulario para recibir datos de usuario y almacenarlos en una base de datos PostgreSQL a través de una API REST.
 
 ## Estructura del Proyecto
-El proyecto está organizado utilizando Hexagonal Architecture y Vertical Slicing:
+El proyecto está organizado utilizando Hexagonal Architecture y Vertical Slicing en el backend:
 
 ```css
 proyecto/
