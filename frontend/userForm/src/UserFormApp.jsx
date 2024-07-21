@@ -1,52 +1,14 @@
-import { useState } from "react";
-// import { useForm } from "./hooks/useForm";
-
+import { useForm } from "./hook/useForm";
 
 export const UserFormApp = () => {
 
-    const [ formState, setFormState ] = useState( {
+    const initialForm = {
         name: '',
         lastName: '',
         email: ''
-    } );
-
-    const onInputChange = ( { target } ) => {
-        const { name, value } = target;
-        setFormState( {
-            ...formState,
-            [ name ]: value,
-        } );
     };
 
-    const onSubmit = ( e ) => {
-        e.preventDefault();
-        console.log( formState );
-        fetch( 'http://localhost:8080/api/users/saveUser', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify( formState )
-        } )
-            .then( response => response.json() )
-            .then( data => {
-                console.log( 'User saved successfully:', data );
-                onResetForm();
-            } )
-            .catch( ( error ) => console.log( 'Error saving user:', error ) );
-    };
-
-    const onResetForm = () => setFormState( {
-        name: '',
-        lastName: '',
-        email: ''
-    } );
-
-    // const [ formState, onInputChange, onSubmit ] = useForm( {
-    //     name: '',
-    //     lastName: '',
-    //     email: ''
-    // } );
+    const { formState, onInputChange, onSubmit } = useForm( initialForm );
 
     const { name, lastName, email } = formState;
 
