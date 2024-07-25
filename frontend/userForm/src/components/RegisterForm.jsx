@@ -12,8 +12,8 @@ export const RegisterForm = () => {
     const { name, lastName, email } = formState;
 
     return (
-        <div className="flex items-center justify-center mb-6">
-            <form onSubmit={onSubmit} className="register-form flex items-center justify-center max-w-md mx-auto p-6 bg-white shadow-md rounded-lg">
+        <div className="mb-6">
+            <form onSubmit={onSubmit} className="register-form flex flex-col items-center justify-center max-w-md mx-auto p-6 bg-white shadow-md rounded-lg">
                 <div>
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
@@ -55,14 +55,12 @@ export const RegisterForm = () => {
                         />
                     </div>
                 </div>
-                <div className="flex items-center">
-                    <button
-                        type="submit"
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                    >
-                        Submit
-                    </button>
-                </div>
+                <button
+                    type="submit"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                >
+                    Submit
+                </button>
             </form>
         </div>
     );
