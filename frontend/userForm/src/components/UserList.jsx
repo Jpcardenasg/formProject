@@ -23,7 +23,7 @@ export const UserList = () => {
     }, [] );
 
     return (
-        <div className="user-list flex items-center justify-center text-center mx-auto w-full bg-gray-100">
+        <div className="user-list flex flex-col items-center justify-center text-center bg-gray-100">
             <button
                 onClick={fetchUsers}
                 className="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"

@@ -61,5 +61,6 @@ proyecto/
 
 
 # Funcionalidades
+- **Listar Usuarios**: Lista los usuarios creados en la base de datos.
 - **Guardar Usuario**: Permite ingresar nombre, apellido y correo electrónico y guardar los datos en la base de datos.
 - **Actualizar y Eliminar Usuario**: Estas funcionalidades están parcialmente implementadas en el backend.
