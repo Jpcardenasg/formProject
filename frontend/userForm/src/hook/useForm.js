@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 export function useForm( initialForm = {} ) {
+
+    const postUrl = 'http://localhost:8080/api/users/saveUser';
     const [ formState, setFormState ] = useState( initialForm );
 
     const onInputChange = ( { target } ) => {
@@ -14,17 +16,20 @@ export function useForm( initialForm = {} ) {
     const onSubmit = async ( e ) => {
         e.preventDefault();
         try {
-            const response = await fetch( 'http://localhost:8080/api/saveData', {
+            const response = await fetch( postUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify( formState )
             } );
+
             if ( !response.ok ) throw new Error( 'HTTP error ' + response.status );
             const data = await response.json();
             console.log( 'Post Operation successful:', data );
+
             onResetForm();
+
         } catch ( error ) {
             console.log( 'Post Operation failed', error );
         }
