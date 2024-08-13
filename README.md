@@ -1,4 +1,4 @@
-# User Data Form Project
+# User Form Project
 Este proyecto implementa un formulario para recibir datos de usuario y almacenarlos en una base de datos PostgreSQL a través de una API REST.
 
 ## Estructura del Proyecto
